@@ -1,4 +1,5 @@
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import org.testng.Assert;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -123,3 +124,21 @@ class Runner{
 //        System.out.println("Hello");
 //    }
 //}
+
+//    List <WebElement> dropdownPELEManagerRoleValues;
+//    List<String> list = new ArrayList<>();
+//dropdownPELEManagerRoleValues.forEach(item -> list.add(item.getText()));
+//
+//        List <WebElement> dropdownPELEManagerRoleValues;
+//        dropdownPELEManagerRoleValues.stream()
+//        .filter(item -> item.getText().equals(role))
+//        .forEach(item -> {
+//        if(item.getAttribute("class").contains("ui-state-disabled"))
+//        logger.debug("Неможливо обрати повторно роль [%s]");
+//        else throw new AssertionError("Manager role doesn't contain atribute 'class' with value 'ui-state-disabled'");
+//        });
+//
+//        List <WebElement> dropdownPELEManagerRoleValues;
+//        dropdownPELEManagerRoleValues.stream()
+//        .filter(item -> item.getText().equals(value))
+//        .forEach(item -> item.click());
