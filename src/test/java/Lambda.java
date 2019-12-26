@@ -4,7 +4,7 @@ import org.testng.Assert;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+public class Lambda {
     public static void main(String[] args) {
 //        Thread thread = new Thread(() -> System.out.println("bla bla bla"));
 //        Различия лямбд и анонимного класса:
