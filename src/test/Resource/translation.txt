@@ -23,10 +23,14 @@ comprise of - состоит, содержит
 invoke - вызывать
 likewise - аналогично, также
 remaining - остальной, что еще остался
-consider = take into acount - принять во внимание
+consider = take into account - принять во внимание
 the scope - область применения
 odd - нечетный
 even - четный
 equals - равно
 to take over - захватить
 kick off as - начать как
+is meant to be - должен быть
+concise - краткий, сжатый
+infer - делать вывод
+concatenated - связанный, сцепленный

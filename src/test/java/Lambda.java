@@ -1,12 +1,9 @@
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.testng.Assert;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Lambda {
     public static void main(String[] args) {
-//        Thread thread = new Thread(() -> System.out.println("bla bla bla"));
+        new Thread(() -> System.out.println("bla bla bla")).start();
 //        Различия лямбд и анонимного класса:
 //        У метода анономного класса своя область видимости (scope) и там видно переменные которые были объявлены
 //        в текущем классе и их можно использовать/переопределять, а в лямбдах нет своей области видимости, но они
