@@ -4,8 +4,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class LambdaTimBuchalka {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         Employee john = new Employee("John Doe", 30);
         Employee tim = new Employee("Tim Buchalka", 21);
         Employee jack = new Employee("Jack Hill", 40);
@@ -25,11 +25,17 @@ public class LambdaTimBuchalka {
         String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
         System.out.println(sillyString);
 
+        AnotherClass anotherClass = new AnotherClass();
+        System.out.println(anotherClass.doSomething());
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2) {
         return uc.upperAndConcat(s1, s2);
     }
+}
+
+interface UpperConcat {
+    public String upperAndConcat(String s1, String s2);
 }
 
 class Employee {
@@ -59,8 +65,16 @@ class Employee {
     }
 }
 
-    interface UpperConcat {
-        public String upperAndConcat(String s1, String s2);
+class AnotherClass{
+    public String doSomething(){
+        return LambdaTimBuchalka.doStringStuff(new UpperConcat() {
+            @Override
+            public String upperAndConcat(String s1, String s2) {
+                return s1.toUpperCase() + s2.toUpperCase();
+            }
+        }, "String1", "String2");
     }
+}
+
 
 

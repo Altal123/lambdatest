@@ -32,5 +32,6 @@ to take over - захватить
 kick off as - начать как
 is meant to be - должен быть
 concise - краткий, сжатый
-infer - делать вывод
+infer - делать вывод, подразумевать
 concatenated - связанный, сцепленный
+accomplish - выполнить
