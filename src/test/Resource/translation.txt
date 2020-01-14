@@ -35,3 +35,8 @@ concise - краткий, сжатый
 infer - делать вывод, подразумевать
 concatenated - связанный, сцепленный
 accomplish - выполнить
+nested - вложенный
+enclosing - огражденный, окруженный
+assume - допускать, предполагать
+negate - отрицать
+chained
