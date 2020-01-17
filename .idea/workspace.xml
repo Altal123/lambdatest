@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4395ce5f-01d8-4f36-923f-206fd37ec2ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LambdaTimBuchalka2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/Resource/translation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Resource/translation.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LambdaTimBuchalka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LambdaTimBuchalka.java" afterDir="false" />
@@ -59,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LambdaTimBuchalka">
+  <component name="RunManager" selected="Application.LambdaTimBuchalka2">
     <configuration name="Lambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lambda" />
       <module name="lambdatest" />
@@ -74,6 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LambdaTimBuchalka2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LambdaTimBuchalka2" />
+      <module name="lambdatest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RegExpression" />
       <module name="lambdatest" />
@@ -83,6 +91,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LambdaTimBuchalka2" />
         <item itemvalue="Application.LambdaTimBuchalka" />
         <item itemvalue="Application.Lambda" />
         <item itemvalue="Application.RegExpression" />
@@ -144,16 +153,5 @@
       <screen x="0" y="0" width="1280" height="682" />
     </state>
     <state x="151" y="0" key="SettingsEditor/0.0.1280.682@0.0.1280.682" timestamp="1578838509352" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/LambdaTimBuchalka.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

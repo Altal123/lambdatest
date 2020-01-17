@@ -45,6 +45,11 @@ public class LambdaTimBuchalka {
         System.out.println(greaterThan15.test(20));
         System.out.println(greaterThan15.and(lessThan100).test(50));
 
+        //поиск и вывод всех фамилий сотрудников
+        employees.forEach(employee -> {
+            String lastName = employee.getName().substring(employee.getName().indexOf(' ') + 1);
+            System.out.println(lastName);
+        });
     }
 
     private static void printEmployeesByAge(List<Employee> employees, String ageText, Predicate<Employee> ageCondition){
