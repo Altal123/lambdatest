@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Lambda {
     public static void main(String[] args) {
@@ -14,9 +15,11 @@ public class Lambda {
         fillArr(arr1);
         fillList(list1);
 
+        //После использования терминальных операций другие терминальные или промежуточные операции к этому же потоку не могут быть применены, поток уже употреблен!!!
         //map method - каждому элементу массива а сопоставится элемент a * 2
         //stream - переводит наш массив в поток, возвращает его и уже работаем с ним
         //map() -отображение - берет каждый элемент из набора данных(множества) и сопоставляет ему новый элемент из нового множества
+        //map - Промежуточная операция!
         arr1 = Arrays.stream(arr1).map(a -> a * 2).toArray(); // каждый элемент массива arr1 умножится на 2
         list1 = list1.stream().map(a -> a * 2).collect(Collectors.toList());
 
@@ -24,6 +27,7 @@ public class Lambda {
         System.out.println(list1);
 
         //filter method - если параметр boolean = true - то значение сохраняется в множестве, если false - убирается из него
+        //filter - Промежуточная операция!
         int[] arr2 = new int[10];
         List<Integer> list2 = new ArrayList<>();
 
@@ -37,10 +41,12 @@ public class Lambda {
         System.out.println(list2);
 
         //forEach - перебираем все элементы множества и работаем с каждым, замена цикла forEach
+        //forEach - Терминальная операция! т.е. конечная, закрывающая поток
         Arrays.stream(arr2).forEach(System.out::println);
         list2.forEach(System.out::println);
 
         //reduce - берет набор данных и сжимает его в один елемент
+        //reduce - Терминальная операция!
         int[] arr3 = new int[10];
         List<Integer> list3 = new ArrayList<>();
 
@@ -67,6 +73,23 @@ public class Lambda {
         System.out.println(set);
         set = set.stream().map(a -> a * 3).collect(Collectors.toSet());
         System.out.println(set);
+
+        //Метод takeWhile() выбирает из потока элементы, пока они соответствуют условию. Если попадается элемент,
+        // который не соответствует условию, то метод завершает свою работу. Выбранные элементы возвращаются в виде потока.
+        Stream<Integer> numbers = Stream.of(-3, -2, -1, 0, 1, 2, 3, -4, -5);
+        numbers.takeWhile(n -> n < 0)
+                .forEach(n -> System.out.println(n));
+
+        //Метод dropWhile() выполняет обратную задачу - он пропускает элементы потока, которые соответствуют условию до тех пор,
+        // пока не встретит элемент, который НЕ соответствует условию:
+        Stream<Integer> numbers2 = Stream.of(-3, -2, -1, 0, 1, 2, 3, -4, -5);
+        numbers2.sorted().dropWhile(n -> n < 0)
+                .forEach(System.out::println);
+
+        //Статический метод concat() объединяет элементы двух потоков, возвращая объединенный поток
+        Stream<String> people1 = Stream.of("Tom", "Bob", "Sam");
+        Stream<String> people2 = Stream.of("Alice", "Kate", "Sam");
+        Stream.concat(people1, people2).forEach(n -> System.out.println(n));
     }
 
     private static void fillList(List<Integer> list) {
@@ -139,3 +162,6 @@ class Runner{
 //        dropdownPELEManagerRoleValues.stream()
 //        .filter(item -> item.getText().equals(value))
 //        .forEach(item -> item.click());
+
+// List<String> TABLE_HEADERS = Arrays.asList(
+//					"№","ID","ІПН","Документ","ПІБ","Дата народження","Статус","Оператор","Дата");
