@@ -36,6 +36,10 @@ public class Lambda {
 
         arr2 = Arrays.stream(arr2).filter(a -> a % 2 == 0).toArray();  //все четные сохраняем в множестве
         list2 = list2.stream().filter(a -> a % 2 == 0).collect(Collectors.toList());
+        //collect(Collectors.toList()) - преобразование данных из типа поток к типу List
+        //collect(Collectors.toSet()) - преобразование данных из типа поток к типу Set
+        //collect(Collectors.toMap(p->p.getName(), t->t.getPrice())) - преобразование данных из типа поток к типу Map, при этом надо задать ключ и значение, см. пример
+        //collect(Collectors.toCollection(ArrayList::new)) - создание новой коллекции ArrayList
 
         System.out.println(Arrays.toString(arr2));
         System.out.println(list2);
