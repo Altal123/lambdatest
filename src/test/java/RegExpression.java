@@ -6,7 +6,8 @@ public class RegExpression {
 
     public static void main(String[] args) {
         //http://regexlib.com/CheatSheet.aspx  - отличный сайт с инфой по регулярным выражениям
-        pattern_matcher();
+//        pattern_matcher();
+        matches();
     }
 
     public static void matches() {
